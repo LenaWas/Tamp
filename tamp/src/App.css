@@ -5,6 +5,13 @@
   text-align: center;
 }
 
+.redrop-logo {
+  display: block;
+  margin: 2rem auto;
+  max-width: 400px;
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -14,6 +21,11 @@
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
