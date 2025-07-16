@@ -1,54 +1,123 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 .redrop-logo {
   display: block;
   margin: 2rem auto;
   max-width: 400px;
 }
 
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo {
-  display: block;
-  margin: 0 auto;
+.hero {
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subtext {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #ccc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.hero-btn {
+  display: inline-block;
+  background: #ff0055;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-.card {
-  padding: 2em;
+.hero-btn:hover {
+  background: #e6004c;
 }
 
-.read-the-docs {
-  color: #888;
+.features {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  color: #222;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.feature:hover {
+  transform: rotateY(5deg) rotateX(5deg) translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 0, 80, 0.5), 0 0 40px rgba(255, 0, 80, 0.3);
+}
+
+.feature::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  transform: rotate(25deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.feature:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.feature h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.fancy-btn {
+  opacity: 0;
+  margin-top: 20px;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  background: #ff0055;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.feature:hover .fancy-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 60px;
 }

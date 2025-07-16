@@ -1,46 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css';
+import logo from './assets/PlAtZhAlTeR.png';
+<img src={logo} alt="Redrop Logo" className="redrop-logo" />
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <div style={{ width: '100%' }}>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          textAlign: 'center',
-          padding: '2rem',
-        }}
-      >
-        <img
-          src="/dashboard/PlAtZhAlTeR.png"
-          alt="Redrop Logo"
-          style={{ maxWidth: '400px', marginBottom: '2rem' }}
-        />
+    <div id="root">
+      {/* Logo (zentriert oben) */}
+      <img src={logo} alt="Redrop Logo" className="redrop-logo" />
 
-        <h1>Vite + React</h1>
+      {/* Hero Section */}
+      <section className="hero">
+        <h1>Redrop – Schluss mit rosa Steuern</h1>
+        <p className="subtext">Eine Bewegung gegen den Gender Pricing Wahnsinn.</p>
+        <a href="#features" className="hero-btn">Jetzt mehr erfahren</a>
+      </section>
 
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test HMR
-          </p>
+      {/* Feature Section */}
+      <section className="features" id="features">
+        <h2>Unsere Features</h2>
+        <div className="feature-grid">
+          <div className="feature">
+            <h3>Aufklärung</h3>
+            <p>Wir informieren über die rosa Steuer und ihre Folgen.</p>
+            <button className="fancy-btn">Mehr erfahren</button>
+          </div>n
+          <div className="feature">
+            <h3>Produkte</h3>
+            <p>Faire Preise für alle – ohne Genderaufschlag.</p>
+            <button className="fancy-btn">Jetzt ansehen</button>
+          </div>
+          <div className="feature">
+            <h3>Mitmachen</h3>
+            <p>Werde Teil der Bewegung und setze ein Zeichen.</p>
+            <button className="fancy-btn">Mach mit</button>
+          </div>
         </div>
+      </section>
 
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
-      </div>
+      <footer className="footer">
+        <p>&copy; 2025 Redrop. Alle Rechte vorbehalten.</p>
+      </footer>
     </div>
   );
 }
-
-
-export default App
