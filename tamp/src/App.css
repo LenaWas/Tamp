@@ -121,3 +121,33 @@
   font-size: 0.9rem;
   margin-top: 60px;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e; /* oder dein gewünschtes Dunkelgrau */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 960px;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
